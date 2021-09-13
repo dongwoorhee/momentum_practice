@@ -23,13 +23,19 @@ function paintToDo(newToDo) {
     const li = document.createElement("li");
     const span = document.createElement("span");
     const button = document.createElement("button");
-    span.innerText = newToDo;
+    const newToDoobj = {
+        text: newToDo,
+        id: Date.now()
+    };
+
+    span.innerText = newToDoobj.text;
     button.innerText = "❌";
     li.appendChild(span);
     li.appendChild(button);
+    li.id = newToDoobj.id;  // give an id
     // console.log(li);
     todoList.appendChild(li);
-    toDos.push(newToDo);
+    toDos.push(newToDoobj);
     console.log(toDos);
     button.addEventListener("click",deleteToDo);
 }
