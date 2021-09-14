@@ -14,6 +14,8 @@ function deleteToDo(event) {
     const newToDos = toDos.filter((item)=>{
         return item.id != deletList.id;
     })
+    // same as above
+    // toDos = toDos.filter((item) => item.id !== parseInt(deletList.id))
     toDos = newToDos;
     saveToDos();
     deletList.remove();
@@ -37,7 +39,7 @@ function paintToDo(newToDoobj) {
     // console.log(li);
     todoList.appendChild(li);
     toDos.push(newToDoobj);
-    console.log(toDos);
+    // console.log(toDos);
     button.addEventListener("click",deleteToDo);
 }
 
