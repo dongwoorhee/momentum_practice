@@ -6,7 +6,13 @@ function getClock(){
     const hour = String(date.getHours()).padStart(2,"0");
     const minute = String(date.getMinutes()).padStart(2,"0");
     const second = date.getSeconds().toString().padStart(2,"0");
-    clock.innerText = `${hour}:${minute}:${second}`;
+
+    if(hour>12){
+        clock.innerText = `PM ${hour%12}:${minute}:${second}`;
+    }
+    else{
+        clock.innerText = `${hour}:${minute}:${second}`;
+    }
 }
 
 getClock();

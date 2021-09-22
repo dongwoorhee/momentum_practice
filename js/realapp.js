@@ -20,7 +20,7 @@ console.log(savedusername);
 
 function paintgreetings(username) {
     greetings.classList.remove(HIDDENCLASSNAME);
-    greetings.innerText = `Hello, welcome Mr. ${username}`;
+    greetings.innerText = `Hello, welcome ${username}`;
      // same as above, but you can avoid odd expression or combination of many strings
 }
 
