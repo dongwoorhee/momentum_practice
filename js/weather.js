@@ -17,8 +17,8 @@ function onSuccess(position){
         const weatherOfLocation = document.querySelector("#weather span:nth-child(2)");
         // console.log(weatherOfLocation);
 
-        nameOfLocation.innerText = data.name;
-        weatherOfLocation.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+        nameOfLocation.innerText = `Place: ${data.name}`;
+        weatherOfLocation.innerText = `${data.weather[0].main} / ${data.main.temp}℃`;
 
     });
 }

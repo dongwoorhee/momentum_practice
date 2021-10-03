@@ -49,5 +49,5 @@ const author = document.querySelector("#quote span:last-child");
 const todaysquote = quotes[Math.floor(Math.random()*quotes.length)];
 
 quote.innerText = todaysquote.quote;
-author.innerText = todaysquote.author;
+author.innerText = `- ${todaysquote.author} -`;
 
